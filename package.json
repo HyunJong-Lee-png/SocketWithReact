@@ -8,7 +8,9 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "start:server": "nodemon --exec tsx Socket-Server/server"
+    "start:server": "nodemon --exec tsx Socket-Server/server",
+    "build:server": "tsc Socket-Server/server.ts --outDir Socket-Server/build",
+    "start:prod": "node Socket-Server/build/server.js"
   },
   "dependencies": {
     "express": "^4.21.0",
