@@ -27,7 +27,7 @@ export interface Rooms {
   members?: string[],
 }
 
-export const socket = io('https://socketio-kakaotalk.onrender.com');
+export const socket = io("https://socketio-kakaotalk.onrender.com");
 
 function App() {
   const [userName, setUserName] = useState<string>('');
