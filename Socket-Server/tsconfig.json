@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "esModuleInterop": true, // 이 옵션 추가
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "outDir": "./build",
+    // "rootDir": "./",
+    "target": "ES2020"
+  },
+  "include": ["**/*.ts"],
+  "exclude": ["node_modules"]
+}

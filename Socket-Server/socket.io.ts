@@ -1,10 +1,10 @@
 import { Server } from "socket.io";
-import userController from "../Mongoose/UserController.ts";
-import roomController from "../Mongoose/RoomController.ts";
-import messageController from "../Mongoose/MessageController.ts";
+import userController from "../Mongoose/UserController";
+import roomController from "../Mongoose/RoomController";
+import messageController from "../Mongoose/MessageController";
 
 export default function socketIO(socketServer: Server) {
-  console.log(1)
+
   socketServer.on('connection', (socket) => {
     console.log('클라이언트와 연결이 성공했습니다.', 'socket.id:', socket.id);
 
@@ -28,7 +28,7 @@ export default function socketIO(socketServer: Server) {
     socket.on('addMemberToRoom', async (roomId, userName) => {
       //뒤로가기 후 다시 방에 입장하면 그대로 리턴
       if (socket.rooms.has(roomId)) return;
-      console.log(1)
+
       const addedMemberRoom = await roomController.addMember(roomId, userName);
       //멤버가 정상적으로 룸에 등록됐다면
       console.log(2)

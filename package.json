@@ -2,15 +2,14 @@
   "name": "chat-with-react4",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
     "start:server": "nodemon --exec tsx Socket-Server/server",
-    "build:server": "tsc Socket-Server/server.ts --outDir Socket-Server/build",
-    "start:prod": "node Socket-Server/build/server.js"
+    "build:server": "tsc --project Socket-Server/tsconfig.json",
+    "start:prod": "node Socket-Server/build/socket-server/server.js"
   },
   "dependencies": {
     "express": "^4.21.0",

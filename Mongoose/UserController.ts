@@ -1,5 +1,5 @@
 import { Document } from "mongoose";
-import User from "./User.ts";
+import User from "./User";
 
 interface UserController {
   createUser(name: string, socket: string): Promise<Document>

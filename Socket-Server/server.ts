@@ -2,7 +2,7 @@ import { createServer } from 'http';
 import express from 'express';
 import { Server } from 'socket.io';
 import mongoose from "mongoose";
-import socketIO from './socket.io.ts';
+import socketIO from './socket.io';
 
 const PORT = process.env.PORT || 8000;
 
