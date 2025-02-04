@@ -9,9 +9,11 @@ const PORT = process.env.PORT || 8000;
 const app = express();
 const httpServer = createServer(app);
 const socketServer = new Server(httpServer, {
-  cors: {
-    origin: 'https://socket-io-kakao-talk.vercel.app'
-  }
+  cors: [
+      "https://socket-io-kakao-talk.vercel.app", // 클라이언트 도메인
+      "http://localhost:5173",                  // 개발용 로컬 도메인
+    ],
+    methods: ["GET", "POST"],
 });
 
 socketIO(socketServer);
