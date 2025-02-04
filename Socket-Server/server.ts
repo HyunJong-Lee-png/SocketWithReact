@@ -28,7 +28,7 @@ const socketServer = new Server(httpServer, {
 
 socketIO(socketServer);
 
-mongoose.connect('mongodb://localhost:27017', { dbName: 'kakao-talk' })
+mongoose.connect('mongodb+srv://cjswoxoddl21:pELacEsxIw58sNXF@cluster0.8ctxd.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', { dbName: 'kakao-talk' })
   .then(() => console.log('몽고DB와 연결이 성공했습니다.'));
 
 
