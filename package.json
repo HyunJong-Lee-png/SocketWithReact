@@ -9,7 +9,7 @@
     "preview": "vite preview",
     "start:server": "nodemon --exec tsx Socket-Server/server",
     "build:server": "tsc --project Socket-Server/tsconfig.json",
-    "start:prod": "node Socket-Server/build/socket-server/server.js"
+    "start:prod": "node Socket-Server/build/Socket-Server/server.js"
   },
   "dependencies": {
     "express": "^4.21.0",
