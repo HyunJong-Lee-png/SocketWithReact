@@ -34,7 +34,7 @@ const Wrapper = styled.div`
 const MessageForm = styled.form`
   position: fixed;
   bottom: 0;
-  width: 480px;
+  max-width: 480px;
   display: grid;
   grid-template-columns: 1fr 4fr 1fr 1fr;
 `;
